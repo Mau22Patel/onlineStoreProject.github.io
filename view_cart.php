@@ -4,7 +4,7 @@
 <?php
 // Start the session
 session_start();
-include 'cart.php';
+include 'cart.html';
 $cart = new Cart();
 
 // Check if the cart is empty by checking the counter
@@ -27,7 +27,7 @@ if ($counter == 0) {
 echo "<div id='emptyCartWrapper' class='empty-cart-message'>";
                 echo "<h1>Shopping Cart</h1>";
                 echo "<p><b>Your Shopping Cart is empty!!!</b></p>";
-                echo "<p><b><a href='products.php'>Go back to products</a></b></p>";
+                echo "<p><b><a href='products.html'>Go back to products</a></b></p>";
                 echo "</div>";
 } else {
     $cart = unserialize($_SESSION['cart']);
@@ -58,7 +58,7 @@ $total_price = $qty * $unit_price;
 
 // Display the product details with the total price
 echo "<div class='view-item'>";
-echo "<form action='remove_from_cart.php' method='POST'>";
+echo "<form action='remove_from_cart.html' method='POST'>";
 echo "<div class='product-image'><img src='$image_path' alt='$product_name' width='125' height='125'></div>";
 echo "<div class='product-info'>";
 echo "<p class='product-name'>$product_name</p>";
@@ -75,8 +75,8 @@ echo "</div>";
 
     }
 
-    echo "<a href='checkout.php' class='checkout-button'>BUY NOW</a>";
-    echo "<p><b><a id = 'forpass' href='products.php'>Continue Shopping</a></b></p>";
+    echo "<a href='checkout.html' class='checkout-button'>BUY NOW</a>";
+    echo "<p><b><a id = 'forpass' href='products.html'>Continue Shopping</a></b></p>";
 }
 ?>
    </div>

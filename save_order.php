@@ -13,7 +13,7 @@
 <?php
 //Start the session
 session_start();
-include 'cart.php';
+include 'cart.html';
 $cart = new Cart();
 $counter= $_SESSION['counter'];
 require_once("conn_db.php"); 
@@ -78,7 +78,7 @@ else {
 		$mysqli->close();
 		unset($_SESSION['counter']);
 		unset($_SESSION['cart']);
-		echo"<p><b> <a href=products.php>Go back to Products </a> </b></p>";
+		echo"<p><b> <a href=products.html>Go back to Products </a> </b></p>";
 	
 }
 ?>

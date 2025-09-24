@@ -32,7 +32,7 @@ if (!isset($_SESSION["firstName"])) {
                             <a href="#">My Account &dtrif;</a>
                             <ul class="dropdown">
                                 <li><a href="index.html">Logout</a></li>
-                                <li><a href="member_page.php">My Details</a></li>
+                                <li><a href="member_page.html">My Details</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -43,7 +43,7 @@ if (!isset($_SESSION["firstName"])) {
             <h1>Hello, <?php echo htmlspecialchars($_SESSION["firstName"]); ?>!</h1>
             <p>Get your chai high.</p>
             <div>
-                <a href="products.php" class="btn">Shop Now</a>
+                <a href="products.html" class="btn">Shop Now</a>
             </div>
         </div>
     </header>

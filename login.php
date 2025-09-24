@@ -3,7 +3,7 @@
 session_start();
 
 // Capture the redirect parameter if set in GET or POST
-$redirect = isset($_GET['redirect']) ? $_GET['redirect'] : (isset($_POST['redirect']) ? $_POST['redirect'] : 'loginhome.php');
+$redirect = isset($_GET['redirect']) ? $_GET['redirect'] : (isset($_POST['redirect']) ? $_POST['redirect'] : 'loginhome.html');
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div id="login">
         <div id="loginwrapper">
             <!-- Include the redirect parameter in the form action if it exists -->
-            <form action="login.php" method="post">
+            <form action="login.html" method="post">
                 <legend>Log In</legend><br/>
                 
                 <!-- Display error message -->
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <input type="submit" value="Log In">
             </form><br/>
-            <a id="forpass" href="register.php">Register</a><br/>
+            <a id="forpass" href="register.html">Register</a><br/>
             <a id="forpass" href="#">Reset Password</a>
         </div>
     </div>

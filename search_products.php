@@ -19,7 +19,7 @@ include_once("conn_db.php");
                     <img src="images/logo.png" alt="A Perfect Cuppa Logo">
                 </a>
                 <div class="search-cart">
-                    <form action="search_products.php" method="post" class="search-wrapper cf">
+                    <form action="search_products.html" method="post" class="search-wrapper cf">
                         <input type="text" placeholder="Search here..." name="productName">
                         <button type="submit">Search</button>
                     </form>
@@ -28,16 +28,16 @@ include_once("conn_db.php");
             <nav role="navigation" class="primary-navigation">
                 <ul>
                     <li><a href="" class="active">Home</a></li>
-                    <li><a href="products.php">Tea Shop</a></li>
+                    <li><a href="products.html">Tea Shop</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li class="dropdown">
                         <a href="#">My Account &dtrif;</a>
                         <ul class="dropdown">
                             <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
-                                <li><a href="logout.php">Log out</a></li>
+                                <li><a href="logout.html">Log out</a></li>
                             <?php else: ?>
-                                <li><a href="login.php">Login</a></li>
-                                <li><a href="register.php">Sign up</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="register.html">Sign up</a></li>
                             <?php endif; ?>
                         </ul>
                     </li>
@@ -74,7 +74,7 @@ include_once("conn_db.php");
                 <p class="search-result-name"><?= htmlspecialchars($row['productName']) ?></p>
                 <p class="search-result-price">$<?= htmlspecialchars($row['productPrice']) ?></p>
                 <p class="search-result-quantity">Quantity: <?= htmlspecialchars($row['qty']) ?></p>
-                <form action="add_to_cart.php" method="post">
+                <form action="add_to_cart.html" method="post">
                     <input type="hidden" name="productID" value="<?= htmlspecialchars($row['productID']) ?>">
                     <div class="search-result-button-container">
                         <button type="submit" name="add" class="add-to-cart">Add to Cart</button>

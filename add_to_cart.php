@@ -3,13 +3,13 @@
 session_start();
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     // Redirect to login with the product info in the URL
-    $redirect_url = "view_cart.php?productID=" . urlencode($_POST['productID']) . "&qty=" . urlencode($_POST['qty']);
-    header("Location: login.php?redirect=" . urlencode($redirect_url));
+    $redirect_url = "view_cart.html?productID=" . urlencode($_POST['productID']) . "&qty=" . urlencode($_POST['qty']);
+    header("Location: login.html?redirect=" . urlencode($redirect_url));
     exit();
 }
 
 // Include cart functionality
-include 'cart.php';
+include 'cart.html';
 
 // Get product ID and quantity from form
 $product_id = $_POST["productID"] ?? null;
@@ -18,7 +18,7 @@ $qty = $_POST["qty"] ?? 1; // Default to 1 if not provided
 // Validate inputs
 if (empty($product_id) || $qty < 1) {
     // Redirect back to the products page if input is invalid
-    header("Location: products.php");
+    header("Location: products.html");
     exit();
 }
 
@@ -50,11 +50,11 @@ if ($result->num_rows == 1) {
     $_SESSION['cart'] = serialize($cart);
 
     // Redirect to the cart page
-    header("Location: view_cart.php");
+    header("Location: view_cart.html");
     exit();
 } else {
     // Redirect back to products page if product not found
-    header("Location: products.php");
+    header("Location: products.html");
     exit();
 }
 

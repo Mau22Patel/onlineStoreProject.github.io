@@ -13,13 +13,13 @@ if (isset($_SESSION['email']))
     echo "<h2> Welcome back $first_name $last_name<h2>"; 
     echo "<p> Email: $email </p>"; 
     echo "<p> Phone: $phone </P>"; 
-	echo"<h2><p><p><p> <a href=logout.php>Logout </a> </p></p></p></h2> ";
-    echo"<h2><p><p><p> <a href=index.php>home </a> </p></p></p></h2> ";
+	echo"<h2><p><p><p> <a href=logout.html>Logout </a> </p></p></p></h2> ";
+    echo"<h2><p><p><p> <a href=index.html>home </a> </p></p></p></h2> ";
 }
 else
 {
 	//redirect back to login form if not authorized
-    header ("Location:login.php"); 
+    header ("Location:login.html"); 
     exit(); 
   	
 }

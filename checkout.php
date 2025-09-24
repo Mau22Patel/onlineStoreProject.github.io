@@ -14,7 +14,7 @@
 <?php
 // Start the session
 session_start(); 
-include 'cart.php';
+include 'cart.html';
 
 $cart = new Cart();
 $counter = isset($_SESSION['counter']) ? $_SESSION['counter'] : 0;
@@ -24,7 +24,7 @@ if ($counter == 0) {
     echo "<div id='emptyCartWrapper' class='empty-cart-message'>";
     echo "<h1>Checkout</h1>";
     echo "<p><b>Your Shopping Cart is empty !!!</b></p>";
-    echo "<p><b><a href='products.php'>Go back to products</a></b></p>";
+    echo "<p><b><a href='products.html'>Go back to products</a></b></p>";
     echo "</div>";
 } else {
     $cart = unserialize($_SESSION['cart']);
@@ -94,11 +94,11 @@ if ($counter == 0) {
   echo "<span>Grand Total</span>";
   echo "<span>$" . number_format($grand_total, 2) . "</span>";
   echo "</div>";
-  echo "<a href='payments.php' class='checkout-button'>CHECKOUT</a>";
+  echo "<a href='payments.html' class='checkout-button'>CHECKOUT</a>";
   echo "</div>";
 
-    echo "<p><b><a id = 'forpass' href='view_cart.php'>Remove items</a></b></p>";
-    echo "<p><b><a id = 'forpass' href='products.php'>Continue Shopping</a></b></p>";
+    echo "<p><b><a id = 'forpass' href='view_cart.html'>Remove items</a></b></p>";
+    echo "<p><b><a id = 'forpass' href='products.html'>Continue Shopping</a></b></p>";
     echo "</div>";
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 //Start the session
 session_start();
-include 'cart.php';
+include 'cart.html';
 $product_no = $_POST['product_no'];
 //remove product from the cart if selected - mark as deleted
 //If the product is not empty
@@ -16,8 +16,8 @@ if ($product_no !="") {
 	$_SESSION["counter"] = $counter - 1;
 	//Serialize and add back to the session
     $_SESSION['cart'] = serialize($cart);
-    //Redirect to the view_cart.php
-    header("Location:view_cart.php");
+    //Redirect to the view_cart.html
+    header("Location:view_cart.html");
     exit(); 
 }
 	

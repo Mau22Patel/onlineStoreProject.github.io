@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->close();
 
             // Success message and email confirmation
-            $success_message = "Thank you for registering. <a href='login.php'>Click here to login</a>";
+            $success_message = "Thank you for registering. <a href='login.html'>Click here to login</a>";
             $email_message = "Thank you for registering with us. Your details are: <br>Name: $firstName $lastName<br>Email: $email<br>Phone Number: $telephone";
             @mail($email, "Website Registration", $email_message);
 
@@ -65,14 +65,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <header class="products-header">
         <div class="products-hero">
             <div class="top-bar">
-                <a href="index.php" class="logo">
+                <a href="index.html" class="logo">
                     <img src="images/logo.png" alt="A Perfect Cuppa Logo">
                 </a>
             </div>
             <nav role="navigation" class="primary-navigation">
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="products.php">Tea Shop</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Tea Shop</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "<p style='color:green;'>$success_message</p>";
             }
             ?>
-            <form action="register.php" method="post">
+            <form action="register.html" method="post">
                 <legend>Sign Up</legend><br/>
                 <input type="text" id="firstName" name="firstName" placeholder="First Name" value="<?php echo htmlspecialchars($firstName); ?>" required><br/>
                 <input type="text" id="lastName" name="lastName" placeholder="Last Name" value="<?php echo htmlspecialchars($lastName); ?>" required><br/>

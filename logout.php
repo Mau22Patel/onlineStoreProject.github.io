@@ -4,7 +4,7 @@
 	unset($_SESSION ["email"]); 
 	session_destroy(); 
 	//Redirect user back to the login page
-	header("Location:index.php");
+	header("Location:index.html");
    	exit;
 
 ?>
