@@ -142,5 +142,26 @@ session_start();
         </section>
         <p>2024 A Perfect Cuppa</p>
     </footer>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDBCOEC8KElQpxSYOpHbFuyMR741qYncDU",
+          authDomain: "online-tea-store-6445a.firebaseapp.com",
+          projectId: "online-tea-store-6445a",
+          storageBucket: "online-tea-store-6445a.firebasestorage.app",
+          messagingSenderId: "911709088837",
+          appId: "1:911709088837:web:757a02d79d6e7dc06a872c"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
 </body>
 </html>
+
