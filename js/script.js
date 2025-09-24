@@ -24,7 +24,7 @@ function initPayPalButton() {
           console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
   
           // Show a success message within this page, for example:
-          window.location.replace("save_order.php");
+          window.location.replace("save_order.html");
           
         });
       },
